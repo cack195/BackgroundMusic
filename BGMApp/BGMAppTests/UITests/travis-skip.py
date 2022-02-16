@@ -38,7 +38,7 @@ SCHEME_FILE = "BGMApp/BGMApp.xcodeproj/xcshareddata/xcschemes/Background Music.x
 UI_REF_XPATH = ".//BuildableReference[@BlueprintName='BGMAppUITests']/.."
 
 # Parse the Xcode scheme.
-tree = ET.parse(SCHEME_FILE)
+tree = et.parse(SCHEME_FILE)
 
 # Set the TestableReference for the UI tests to skipped.
 tree.getroot().findall(UI_REF_XPATH)[0].set("skipped", "YES")
